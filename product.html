@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Listing</title>
+</head>
+<body>
+
+<header>
+    <h1>Products</h1>
+</header>
+
+<main>
+    <section>
+
+        <article>
+            <img src="images/photo1.jpg" alt="Smartphone" width="150">
+            <h3>Smartphone</h3>
+            <p>$500</p>
+            <a href="detailPhone.html">View Details</a>
+        </article>
+
+        <article>
+            <img src="images/photo2.png" alt="Headphones" width="150">
+            <h3>Headphones</h3>
+            <p>$100</p>
+            <a href="detailHeadphone.html">View Details</a>
+        </article>
+
+    </section>
+</main>
+
+<aside>
+    <h2>Filters</h2>
+    <form>
+        <fieldset>
+            <legend>Category</legend>
+            <input type="checkbox" id="electronics">
+            <label for="electronics">Electronics</label><br>
+
+            <input type="checkbox" id="clothing">
+            <label for="clothing">Clothing</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Price</legend>
+            <input type="radio" name="price" id="low">
+            <label for="low">Below $100</label><br>
+
+            <input type="radio" name="price" id="high">
+            <label for="high">Above $100</label>
+        </fieldset>
+    </form>
+</aside>
+
+</body>
+</html>

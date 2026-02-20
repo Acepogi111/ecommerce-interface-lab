@@ -1,0 +1,130 @@
+/* =========================
+   TASK 1: GLOBAL STYLES
+========================= */
+
+/* CSS Variables */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --bg-light: #f4f4f4;
+  --text-main: #333;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: var(--primary-color);
+}
+
+/* =========================
+   TASK 2: INTERACTIVE STATES
+========================= */
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover */
+nav a:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Active */
+button:active {
+  background-color: #c55d12;
+}
+
+/* Focus (keyboard users) */
+input:focus, button:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+/* =========================
+   TASK 3: PRODUCT CARDS
+========================= */
+
+article {
+  display: inline-block;
+  width: 250px;
+  margin: 10px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  vertical-align: top;
+}
+
+/* Alternating colors */
+article:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+article:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* =========================
+   TASK 4: ADVANCED SELECTORS
+========================= */
+
+/* Cart empty message */
+.cart:empty::before {
+  content: "Your cart is empty.";
+  color: gray;
+  font-style: italic;
+}
+
+/* Price currency */
+.price::before {
+  content: "₱";
+}
+
+/* Required fields */
+input:required {
+  border: 2px solid red;
+}
+
+/* Valid input */
+input:valid {
+  border: 2px solid green;
+}
+
+/* =========================
+   TASK 5: DETAILED STYLING
+========================= */
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* First column bold */
+td:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Order history bullets */
+ul li::marker {
+  color: var(--accent-color);
+}

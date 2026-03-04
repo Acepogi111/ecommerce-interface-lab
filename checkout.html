@@ -1,92 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
 <body>
 
-    <header>
-        <h1>Checkout</h1>
-    </header>
+<header>
+    <h1>Checkout</h1>
+</header>
 
-    <main>
+<main class="container">
 
-        <section>
+    <section>
 
-            <h2>Shipping Address</h2>
+        <h2>Shipping Address</h2>
 
-            <form action="account.html" method="get">
+        <form action="account.html" method="get">
 
-                <fieldset>
+            <fieldset>
 
-                    <legend>Shipping Information</legend>
+                <legend>Shipping Information</legend>
 
-                    <p>
-                        <label for="fullname">Full Name</label><br>
-                        <input type="text" id="fullname" name="fullname" required>
-                    </p>
+                <p>
+                    <label for="fullname">Full Name</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
 
-                    <p>
-                        <label for="street">Street Address</label><br>
-                        <input type="text" id="street" name="street" required>
-                    </p>
+                <p>
+                    <label for="street">Street Address</label><br>
+                    <input type="text" id="street" name="street" required>
+                </p>
 
-                    <p>
-                        <label for="zipcode">Zip Code</label><br>
-                        <input type="text" id="zipcode" name="zipcode" required>
-                    </p>
+                <p>
+                    <label for="zipcode">Zip Code</label><br>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </p>
 
-                </fieldset>
+            </fieldset>
 
-                <br>
+            <fieldset>
 
-                <fieldset>
+                <legend>Payment Method</legend>
 
-                    <legend>Payment Method</legend>
+                <p>
+                    <input type="radio" id="credit_card" name="payment" value="credit_card" required>
+                    <label for="credit_card">Credit Card</label>
+                </p>
 
-                    <p>
-                        <input type="radio" id="credit_card" name="payment" value="credit_card" required>
-                        <label for="credit_card">Credit Card</label>
-                    </p>
+                <p>
+                    <input type="radio" id="paypal" name="payment" value="paypal">
+                    <label for="paypal">PayPal</label>
+                </p>
 
-                    <p>
-                        <input type="radio" id="paypal" name="payment" value="paypal">
-                        <label for="paypal">PayPal</label>
-                    </p>
+            </fieldset>
 
-                </fieldset>
+            <section>
 
-                <br>
+                <h2>Order Summary</h2>
 
-                <section>
+                <p>Product: Smartphone</p>
+                <p>Price: $500</p>
+                <p><strong>Total: $500</strong></p>
 
-                    <h2>Order Summary</h2>
+            </section>
 
-                    <p>Product: Smartphone</p>
-                    <p>Price: $500</p>
+            <button type="submit">Place Order</button>
 
-                    <p>
-                        <strong>Total: $500</strong>
-                    </p>
+        </form>
 
-                </section>
+    </section>
 
-                <br>
-
-                <button type="submit">
-                    Place Order
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
+</main>
 
 </body>
 

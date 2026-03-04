@@ -25,11 +25,11 @@ h1, h2, h3 {
   color: var(--primary-color);
 }
 
+
 /* =========================
    TASK 2: INTERACTIVE STATES
 ========================= */
 
-/* Navigation links */
 nav a {
   text-decoration: none;
   color: var(--primary-color);
@@ -37,21 +37,19 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover */
 nav a:hover {
   background-color: var(--accent-color);
   color: white;
 }
 
-/* Active */
 button:active {
   background-color: #c55d12;
 }
 
-/* Focus (keyboard users) */
 input:focus, button:focus {
   outline: 2px solid var(--accent-color);
 }
+
 
 /* =========================
    TASK 3: PRODUCT CARDS
@@ -68,7 +66,6 @@ article {
   vertical-align: top;
 }
 
-/* Alternating colors */
 article:nth-child(odd) {
   background-color: #ffffff;
 }
@@ -77,37 +74,34 @@ article:nth-child(even) {
   background-color: #f0f0f0;
 }
 
+
 /* =========================
    TASK 4: ADVANCED SELECTORS
 ========================= */
 
-/* Cart empty message */
 .cart:empty::before {
   content: "Your cart is empty.";
   color: gray;
   font-style: italic;
 }
 
-/* Price currency */
 .price::before {
   content: "₱";
 }
 
-/* Required fields */
 input:required {
   border: 2px solid red;
 }
 
-/* Valid input */
 input:valid {
   border: 2px solid green;
 }
+
 
 /* =========================
    TASK 5: DETAILED STYLING
 ========================= */
 
-/* Table styling */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -118,13 +112,166 @@ td, th {
   padding: 8px;
 }
 
-/* First column bold */
 td:first-child {
   font-weight: bold;
   color: var(--primary-color);
 }
 
-/* Order history bullets */
 ul li::marker {
   color: var(--accent-color);
+}
+
+
+/* =========================
+   LAB 3 RESPONSIVE DESIGN
+========================= */
+
+/* ===== MOBILE FIRST ===== */
+
+/* Responsive Images */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+
+/* Header Flexbox */
+
+header{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:10px;
+background-color:var(--primary-color);
+color:white;
+}
+
+
+/* Hero Section */
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+height:200px;
+text-align:center;
+background:#eee;
+}
+
+
+/* Product Grid Mobile */
+
+.products{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+
+/* Product Cards */
+
+.product-card{
+background:white;
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+animation:fadeIn 1s ease-in-out;
+}
+
+
+/* Cart Flexbox */
+
+.cart-item{
+display:flex;
+align-items:center;
+gap:10px;
+border:1px solid #ccc;
+padding:10px;
+}
+
+
+/* Sidebar Mobile Layout */
+
+.container{
+display:block;
+}
+
+
+/* Checkout Layout */
+
+.checkout{
+display:block;
+}
+
+
+/* Responsive Table */
+
+.table-container{
+overflow-x:auto;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width:481px){
+
+.products{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width:769px){
+
+header{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+}
+
+
+.products{
+grid-template-columns:repeat(4,minmax(200px,1fr));
+}
+
+
+.container{
+display:grid;
+grid-template-columns:25% 75%;
+gap:20px;
+}
+
+
+.checkout{
+display:flex;
+gap:20px;
+}
+
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }

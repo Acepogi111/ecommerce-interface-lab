@@ -45,3 +45,13 @@ throw new TypeError("Invalid input: All arguments must be numbers");
 return numbers.reduce((total,n)=> total+n ,0);
 
 }
+
+// Problem 4
+function getTopScorers(playerList){
+
+return playerList
+.filter(player => player.score > 8)
+.map(player => player.name)
+.join(", ");
+
+}
